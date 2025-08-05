@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APlus Drivers - Your Ride, Delivered</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" , href="assets/stylesheet/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="logo">
+            <img class="aplus_logo" src="assets/images/aplus_logo.svg" />
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+
+          <a href="#contact" class="btn">Contact Us</a>
+
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Your Ride, Delivered</h1>
+            <p>
+              Experience the future of transportation with APlus. Fast,
+              reliable, and affordable rides at your fingertips.
+            </p>
+            <a href="#contact" class="btn">Contact Us →</a>
+          </div>
+          <div class="hero-form">
+            <h3>Book a Driver</h3>
+            <p>
+              Please complete the details below, then click on Submit and we
+              will be in touch
+            </p>
+            <form id="bookingForm">
+              <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pickupDate">Pickup Date*</label>
+                  <input
+                    type="date"
+                    id="pickupDate"
+                    name="pickupDate"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pickupTime">Pickup Time*</label>
+                  <input
+                    type="time"
+                    id="pickupTime"
+                    name="pickupTime"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pickupLocation">Pickup Location*</label>
+                  <input
+                    type="text"
+                    id="pickupLocation"
+                    name="pickupLocation"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="dropoffLocation">Dropoff Location*</label>
+                  <input
+                    type="text"
+                    id="dropoffLocation"
+                    name="dropoffLocation"
+                    required
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn"
+                style="width: 100%; margin-top: 1rem"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              APlus Drivers is a fast-growing driver outsourcing company
+              committed to delivering reliable, professional, and cost-effective
+              drivers to individuals, families, and organizations nationwide.
+            </p>
+            <p>
+              Since our establishment, we have taken pride in the values that we
+              appreciate in meeting the unique mobility needs of both personal
+              and corporate clients — from daily commutes to executive transport
+              services, we get ensure convenience at every turn.
+            </p>
+            <p>
+              At APlus Drivers, our licensed and insured drivers — we ensure
+              safety, professionalism, and peace of mind on every journey.
+            </p>
+            <p>Experience dependable service. Try APlus Drivers today!</p>
+          </div>
+          <div>
+            <h3 style="margin-bottom: 1.5rem">Why Choose APlus?</h3>
+            <p>
+              We're committed to providing the best ride experience with
+              unmatched service quality.
+            </p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Safe and Secure</h3>
+            <p>
+              Your safety is our top priority. Every APlus driver is thoroughly
+              vetted and trained to deliver a secure and professional
+              experience, whether you're commuting alone or with loved ones.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Comfortable and Convenient</h3>
+            <p>
+              From personal pickups to client-well-maintained vehicles, we
+              ensure every ride is smooth and stress-free. Sit back, relax, and
+              enjoy the journey.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Fast and Reliable</h3>
+            <p>
+              No more waiting around. With an average pickup time of just 5
+              minutes, our drivers are always ready when you are. Punctuality is
+              non-negotiable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p
+          style="
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-gray);
+          "
+        >
+          We're committed to providing the best ride experience with unmatched
+          service quality.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Pickup/Drop-off</h3>
+              <p>
+                Our well-trained drivers ensure seamless pickup and drop-off
+                services wherever you need to go, safely and efficiently.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3>Trip Scheduling</h3>
+              <p>
+                Plan and schedule your trips in advance. Our scheduling system
+                ensures your driver will be ready exactly when you need them.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h3>Corporate Drivers</h3>
+              <p>
+                Professional, trustworthy, and well-groomed drivers for all your
+                corporate transportation needs and executive travel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+      <div class="container">
+        <div class="experience-content">
+          <div class="experience-image">
+            <!-- Placeholder for driver image -->
+          </div>
+          <div class="experience-text">
+            <h2>
+              Your Best Ride <span class="highlight">Experience.</span
+              ><br />Guaranteed.
+            </h2>
+            <div class="experience-features">
+              <div class="experience-feature">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                  <h4>Affordable Rate</h4>
+                  <p>
+                    Get premium transportation without compromising quality, get
+                    where you need to go affordably.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              Got more questions, submit questions?
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Average pickup time of 3 minutes. Our drivers are always on time
+                to ensure you get to your destination.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Average pickup time of 3 minutes. Our drivers are always on time
+              to ensure you get to your destination.
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We maintain the highest standards of punctuality and reliability
+                for all our transportation services.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Average pickup time of 3 minutes. Our drivers are always on time
+              to ensure you get to your destination.
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our professional drivers are trained to provide exceptional
+                service and ensure your comfort throughout the journey.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Average pickup time of 3 minutes. Our drivers are always on time
+              to ensure you get to your destination.
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Safety is our top priority. All our drivers undergo thorough
+                background checks and regular training.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Average pickup time of 3 minutes. Our drivers are always on time
+              to ensure you get to your destination.
+              <i class="fas fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We offer competitive rates while maintaining the highest quality
+                of service in the industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem">
+          <a href="#contact" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>APlus</h3>
+            <p>
+              36B Phillips Avenue,<br />
+              State Housing, Surulere, State,<br />
+              Lagos.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="#">Solo Rides</a></li>
+              <li><a href="#">Trip Pickup Services</a></li>
+              <li><a href="#">Corporate Hirings</a></li>
+              <li><a href="#">Solo Tours</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>info@aplusservice.com</p>
+            <p>+234 (0) 805 194</p>
+            <h4 style="margin-top: 1rem">Signup for Newsletter</h4>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter email" />
+              <button class="btn">Contact Us</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 APlus Drivers. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/javascript/main.js"></script>
+  </body>
+</html>
