@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-  --primary-red: #e53e3e;
+  --primary-red: #ec1a23;
   --primary-red-hover: #c53030;
   --text-dark: #2d3748;
   --text-gray: #718096;
@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
@@ -28,9 +29,10 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 1.5rem 2.5rem;
 }
 
 /* Header Styles */
@@ -40,7 +42,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   transition: all 0.3s ease;
 }
 
@@ -95,13 +97,14 @@ body {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: var(--text-dark);
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 
@@ -122,8 +125,28 @@ body {
   display: inline-block;
 }
 
+.contact-btn {
+  background: var(--bg-white);
+  color: var(--primary-red);
+  padding: 12px 45.5px;
+  border: 2px solid var(--primary-red);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background: var(--primary-red);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
 .btn:hover {
-  background: var(--primary-red-hover);
+  background: var(--primary-red);
   transform: translateY(-2px);
 }
 
@@ -551,8 +574,45 @@ body {
   color: var(--text-light);
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .about h2,
+  .services h2,
+  .experience-text h2,
+  .faq h2 {
+    font-size: 2rem;
+  }
+
+  .logo .aplus_logo {
+    width: 6rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
   }
@@ -567,6 +627,14 @@ body {
     flex-direction: column;
     padding: 1rem;
     box-shadow: var(--shadow);
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .logo .aplus_logo {
+    width: 8rem;
   }
 
   .nav-menu.active {
@@ -617,22 +685,8 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .about h2,
-  .services h2,
-  .experience-text h2,
-  .faq h2 {
-    font-size: 2rem;
-  }
-}
+/* @media only screen and (min-width: 577px) and (max-width: 768px) {
+} */
 
 /* Animations */
 @keyframes fadeInUp {
