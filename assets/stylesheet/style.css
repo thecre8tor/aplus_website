@@ -615,9 +615,18 @@ html {
   .hero-text h1 {
     font-size: 2rem;
   }
+
+  .experience {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding: 0;
+    margin: 0;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
