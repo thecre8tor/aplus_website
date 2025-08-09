@@ -151,6 +151,67 @@
           </div>
         </div>
 
+        <div class="hero-form-mobile">
+          <h3>Book a Driver</h3>
+          <p>
+            Please complete the details below, then click on Submit and we will
+            be in touch
+          </p>
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="name">Name*</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number*</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupDate">Pickup Date*</label>
+                <input type="date" id="pickupDate" name="pickupDate" required />
+              </div>
+              <div class="form-group">
+                <label for="pickupTime">Pickup Time*</label>
+                <input type="time" id="pickupTime" name="pickupTime" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupLocation">Pickup Location*</label>
+                <input
+                  type="text"
+                  id="pickupLocation"
+                  name="pickupLocation"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="dropoffLocation">Dropoff Location*</label>
+                <input
+                  type="text"
+                  id="dropoffLocation"
+                  name="dropoffLocation"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="btn"
+                style="width: 50%; margin-top: 1rem"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+
         <div class="features-section">
           <div class="features-left">
             <div class="feature-card">

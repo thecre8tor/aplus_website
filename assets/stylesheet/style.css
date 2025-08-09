@@ -337,6 +337,7 @@ form {
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  padding: 0 15px;
 }
 
 .hero {
@@ -355,6 +356,7 @@ form {
   align-items: center;
   position: relative;
   margin-top: 110px;
+  padding: 0 15px;
 }
 
 .hero-content {
@@ -376,6 +378,10 @@ form {
   width: 100%;
   max-width: 400px;
   z-index: 10;
+}
+
+.hero-form-mobile {
+  display: none;
 }
 
 .hero-form h3 {
@@ -608,15 +614,30 @@ html {
     font-size: 2rem;
   }
 
-  .container {
-    padding: 0 15px;
+  .services h2 p {
+    text-align: center;
   }
 
   .hero-text h1 {
     font-size: 2rem;
   }
 
+  .hero-form-mobile {
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 24px;
+  }
+
   .experience {
+    display: none;
+  }
+
+  .feature-card {
+    flex-direction: column;
+  }
+
+  .services br {
     display: none;
   }
 }
@@ -624,12 +645,17 @@ html {
 @media (max-width: 768px) {
   .about {
     padding: 0;
+    padding-top: 50px;
     margin: 0;
   }
 
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
   }
 
   .experience-content {
@@ -643,6 +669,7 @@ html {
 
   .features-section {
     flex-direction: column-reverse;
+    gap: 0px;
   }
 
   .features-left {
@@ -666,8 +693,8 @@ html {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    margin-bottom: 200px;
+  .header {
+    padding: 0 15px;
   }
 
   .hero-content {
