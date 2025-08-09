@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" , href="assets/stylesheet/styles.css" />
+    <link rel="stylesheet" , href="assets/stylesheet/style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -23,7 +23,7 @@
       <div class="container">
         <nav class="nav">
           <a href="#" class="logo">
-            <img class="aplus_logo" src="assets/images/aplus_logo.svg" />
+            <img src="assets/images/aplus_logo.svg" width="138" />
           </a>
 
           <ul class="nav-menu" id="navMenu">
@@ -34,7 +34,7 @@
             <li><a href="#contact">Contact Us</a></li>
           </ul>
 
-          <a href="#contact" class="btn">Contact Us</a>
+          <a href="#contact" class="nav-btn">Contact Us</a>
 
           <button class="mobile-menu-toggle" id="mobileMenuToggle">
             <i class="fas fa-bars"></i>
@@ -135,63 +135,82 @@
             <h2>About Us</h2>
             <p>
               APlus Drivers is a fast-growing driver outsourcing company
-              committed to delivering reliable, professional, and cost-effective
-              drivers to individuals, families, and organizations nationwide.
+              committed to delivering reliable, professional, and well-trained
+              drivers to individuals, families, and businesses across Lagos,
+              Nigeria.
             </p>
             <p>
-              Since our establishment, we have taken pride in the values that we
-              appreciate in meeting the unique mobility needs of both personal
-              and corporate clients — from daily commutes to executive transport
-              services, we get ensure convenience at every turn.
+              We specialize in meeting the unique mobility needs of both
+              personal and corporate clients, from daily commutes and school
+              runs to executive transport and long-term driver placements.
             </p>
             <p>
-              At APlus Drivers, our licensed and insured drivers — we ensure
-              safety, professionalism, and peace of mind on every journey.
+              At APlus Drivers, we don’t just assign drivers. We prioritize
+              safety, professionalism, and peace of mind every step of the way.
             </p>
             <p>Experience dependable service. Try APlus Drivers today!</p>
           </div>
-          <div>
-            <h3 style="margin-bottom: 1.5rem">Why Choose APlus?</h3>
-            <p>
+        </div>
+
+        <div class="features-section">
+          <div class="features-left">
+            <div class="feature-card">
+              <img
+                src="./assets/images/safe_and_secure.svg"
+                alt="Padlock icon"
+              />
+              <div>
+                <h3>Safe and Secure</h3>
+                <p>
+                  Your safety is our top priority. Every APlus driver is
+                  thoroughly vetted and trained to deliver a secure and
+                  professional experience, whether you're commuting alone or
+                  with loved ones.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <img
+                src="./assets/images/comfortable_and_convenient.svg"
+                alt="Person sleeping icon"
+              />
+              <div>
+                <h3>Comfortable and Convenient</h3>
+                <p>
+                  From personal pickups to client-well-maintained vehicles, we
+                  ensure every ride is smooth and stress-free. Sit back, relax,
+                  and enjoy the journey.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <img
+                src="./assets/images/fast_and_reliable.svg"
+                alt="Lightening bolt icon"
+              />
+              <div>
+                <h3>Fast and Reliable</h3>
+                <p>
+                  No more waiting around. With an average pickup time of just 5
+                  minutes, our drivers are always ready when you are.
+                  Punctuality is non-negotiable.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="features-right">
+            <h3>Why Choose APlus?</h3>
+            <p style="margin-top: 16px">
               We're committed to providing the best ride experience with
               unmatched service quality.
             </p>
-          </div>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-shield-alt"></i>
+            <div style="margin-top: 40px">
+              <img
+                src="./assets/images/choose_aplus.png"
+                alt="Man holding a key"
+                style="width: 100%"
+              />
             </div>
-            <h3>Safe and Secure</h3>
-            <p>
-              Your safety is our top priority. Every APlus driver is thoroughly
-              vetted and trained to deliver a secure and professional
-              experience, whether you're commuting alone or with loved ones.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-car"></i>
-            </div>
-            <h3>Comfortable and Convenient</h3>
-            <p>
-              From personal pickups to client-well-maintained vehicles, we
-              ensure every ride is smooth and stress-free. Sit back, relax, and
-              enjoy the journey.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>Fast and Reliable</h3>
-            <p>
-              No more waiting around. With an average pickup time of just 5
-              minutes, our drivers are always ready when you are. Punctuality is
-              non-negotiable.
-            </p>
           </div>
         </div>
       </div>
@@ -208,16 +227,21 @@
             color: var(--text-gray);
           "
         >
-          We're committed to providing the best ride experience with unmatched
-          service quality.
+          We're committed to providing the best ride experience with
+          <br />unmatched service quality.
         </p>
 
         <div class="services-grid">
-          <div class="service-card">
+          <div
+            class="service-card"
+            style="
+              background-image: url('./assets/images/pickup_image.png');
+              background-size: cover;
+              background-position: center;
+            "
+          >
             <div class="service-content">
-              <div class="service-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
+              <img src="./assets/images/pick_up.svg" alt="" width="50" />
               <h3>Pickup/Drop-off</h3>
               <p>
                 Our well-trained drivers ensure seamless pickup and drop-off
@@ -225,11 +249,20 @@
               </p>
             </div>
           </div>
-          <div class="service-card">
+          <div
+            class="service-card"
+            style="
+              background-image: url('./assets/images/trip_scheduling_image.png');
+              background-size: cover;
+              background-position: center;
+            "
+          >
             <div class="service-content">
-              <div class="service-icon">
-                <i class="fas fa-calendar-alt"></i>
-              </div>
+              <img
+                src="./assets/images/trip_scheduling.svg"
+                alt=""
+                width="45"
+              />
               <h3>Trip Scheduling</h3>
               <p>
                 Plan and schedule your trips in advance. Our scheduling system
@@ -237,11 +270,20 @@
               </p>
             </div>
           </div>
-          <div class="service-card">
+          <div
+            class="service-card"
+            style="
+              background-image: url('./assets/images/corporate_drivers_image.png');
+              background-size: cover;
+              background-position: center;
+            "
+          >
             <div class="service-content">
-              <div class="service-icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
+              <img
+                src="./assets/images/trip_scheduling.svg"
+                alt=""
+                width="45"
+              />
               <h3>Corporate Drivers</h3>
               <p>
                 Professional, trustworthy, and well-groomed drivers for all your
@@ -257,103 +299,37 @@
     <section class="experience">
       <div class="container">
         <div class="experience-content">
-          <div class="experience-image">
-            <!-- Placeholder for driver image -->
+          <div class="experience-images">
+            <div style="display: flex; align-items: baseline; gap: 16px">
+              <img
+                src="./assets/images/experience_img_1.png"
+                alt="experience image 1"
+                style="width: 50%; height: 449px"
+              />
+              <img
+                src="./assets/images/experience_img-2.png"
+                alt="experience image 2"
+                style="width: 50%; height: 596px"
+              />
+            </div>
           </div>
           <div class="experience-text">
             <h2>
-              Your Best Ride <span class="highlight">Experience.</span
+              Your Best Ride <span class="highlight">Experience,</span
               ><br />Guaranteed.
             </h2>
-            <div class="experience-features">
-              <div class="experience-feature">
-                <i class="fas fa-dollar-sign"></i>
-                <div>
-                  <h4>Affordable Rate</h4>
-                  <p>
-                    Get premium transportation without compromising quality, get
-                    where you need to go affordably.
-                  </p>
-                </div>
+            <div class="experience-feature">
+              <div style="width: 264px">
+                <h4 style="font-size: 22px; font-weight: 500">
+                  Affordable Rate
+                </h4>
+                <p>
+                  Get premium transportation without compromising quality, get
+                  where you need to go affordably.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
-          <div class="faq-item">
-            <button class="faq-question">
-              Got more questions, submit questions?
-              <i class="fas fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Average pickup time of 3 minutes. Our drivers are always on time
-                to ensure you get to your destination.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Average pickup time of 3 minutes. Our drivers are always on time
-              to ensure you get to your destination.
-              <i class="fas fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-                We maintain the highest standards of punctuality and reliability
-                for all our transportation services.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Average pickup time of 3 minutes. Our drivers are always on time
-              to ensure you get to your destination.
-              <i class="fas fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Our professional drivers are trained to provide exceptional
-                service and ensure your comfort throughout the journey.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Average pickup time of 3 minutes. Our drivers are always on time
-              to ensure you get to your destination.
-              <i class="fas fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Safety is our top priority. All our drivers undergo thorough
-                background checks and regular training.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Average pickup time of 3 minutes. Our drivers are always on time
-              to ensure you get to your destination.
-              <i class="fas fa-plus faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>
-                We offer competitive rates while maintaining the highest quality
-                of service in the industry.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem">
-          <a href="#contact" class="btn">Contact Us</a>
         </div>
       </div>
     </section>
@@ -363,17 +339,19 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>APlus</h3>
+            <img
+              src="assets/images/aplus_logo.svg"
+              width="138"
+              style="margin-bottom: 40px"
+            />
             <p>
-              36B Phillips Avenue,<br />
-              State Housing, Surulere, State,<br />
-              Lagos.
+              APlus Drivers, Third Floor, 55 Bode Thomas, Surulere, Yaba, Lagos
             </p>
             <div class="social-links">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><img src="./assets/images/ig.svg" alt="" /></a>
+              <a href="#"><img src="./assets/images/fb.svg" alt="" /></a>
+              <a href="#"><img src="./assets/images/yt.svg" alt="" /></a>
+              <a href="#"><img src="./assets/images/x.svg" alt="" /></a>
             </div>
           </div>
           <div class="footer-section">
@@ -398,15 +376,32 @@
             <h3>Contact</h3>
             <p>info@aplusservice.com</p>
             <p>+234 (0) 805 194</p>
-            <h4 style="margin-top: 1rem">Signup for Newsletter</h4>
+          </div>
+          <div class="footer-section">
+            <h4 style="color: #000">Signup for Newsletter</h4>
+            <p>
+              Sign up to our mailing list to find out more information and keep
+              up to date about our activities
+            </p>
             <div class="newsletter-form">
               <input type="email" placeholder="Enter email" />
-              <button class="btn">Contact Us</button>
+              <div>
+                <button
+                  style="
+                    text-decoration: none;
+                    background-color: #b2272d;
+                    border: none;
+                    padding: 16px 33px;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: 500;
+                  "
+                >
+                  Subscribe →
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 APlus Drivers. All rights reserved.</p>
         </div>
       </div>
     </footer>
