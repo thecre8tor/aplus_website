@@ -83,6 +83,12 @@ body {
   transform: translateY(-2px);
 }
 
+.btn-reset {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -110,12 +116,15 @@ body {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
+  display: flex;
+  gap: 23px;
+  align-items: center;
 }
 
 .experience-text {
   display: flex;
   flex-direction: column;
-  gap: 99px;
+  /* gap: 99px; */
 }
 
 .experience-text .highlight {
@@ -629,10 +638,6 @@ html {
     padding: 40px 24px;
   }
 
-  .experience {
-    display: none;
-  }
-
   .feature-card {
     flex-direction: column;
   }
@@ -656,6 +661,10 @@ html {
 
   .container {
     padding: 0 15px;
+  }
+
+  .experience {
+    display: none;
   }
 
   .experience-content {
@@ -687,6 +696,7 @@ html {
   .footer-content {
     display: flex;
     flex-direction: column;
+    padding: 0 15px;
   }
 
   .form-row {
