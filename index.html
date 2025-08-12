@@ -93,13 +93,27 @@
                 <div class="form-group">
                   <p style="font-size: 16px; font-weight: 500">I need a</p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: center">
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-bottom: 13px;
+                  "
+                >
                   <input type="radio" style="accent-color: #e53e3e" />
                   <p style="font-size: 16px; font-weight: 500">
                     Driver for a single trip
                   </p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: center">
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-bottom: 13px;
+                  "
+                >
                   <input type="radio" style="accent-color: #e53e3e" />
                   <p style="font-size: 16px; font-weight: 500">
                     Personal driver
@@ -113,28 +127,31 @@
                 </div>
               </div>
               <div class="form-row">
-                <div class="form-group">
-                  <label for="pickupDate" style="font-size: 12px"
-                    >Pickup Date*</label
-                  >
-                  <input
-                    type="date"
-                    id="pickupDate"
-                    name="pickupDate"
-                    required
-                    placeholder="Pickup Date*"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="pickupTime" style="font-size: 12px"
-                    >Pickup Time*</label
-                  >
-                  <input
-                    type="time"
-                    id="pickupTime"
-                    name="pickupTime"
-                    required
-                  />
+                <div style="display: flex; gap: 16px">
+                  <div class="form-group" style="width: 50%">
+                    <label for="pickupDate" style="font-size: 12px"
+                      >Pickup Date*</label
+                    >
+                    <input
+                      type="date"
+                      id="pickupDate"
+                      name="pickupDate"
+                      required
+                      placeholder="Pickup Date*"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="pickupTime" style="font-size: 12px"
+                      >Pickup Time*</label
+                    >
+                    <input
+                      type="time"
+                      id="pickupTime"
+                      name="pickupTime"
+                      style="width: 100%"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
               <div class="form-row">
@@ -164,7 +181,7 @@
               <button
                 type="submit"
                 class="btn"
-                style="width: 100%; margin-top: 1rem"
+                style="width: 40%; margin-top: 1rem"
               >
                 Submit
               </button>
@@ -219,40 +236,62 @@
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="pickupDate">Pickup Date*</label>
-                <input type="date" id="pickupDate" name="pickupDate" required />
-              </div>
-              <div class="form-group">
-                <label for="pickupTime">Pickup Time*</label>
-                <input type="time" id="pickupTime" name="pickupTime" required />
+              <div style="display: flex; gap: 16px" class="custom-form-row">
+                <div class="form-group">
+                  <label for="pickupDate" style="font-size: 12px"
+                    >Pickup Date*</label
+                  >
+                  <input
+                    type="date"
+                    id="pickupDate"
+                    name="pickupDate"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pickupTime" style="font-size: 12px"
+                    >Pickup Time*</label
+                  >
+                  <input
+                    type="time"
+                    id="pickupTime"
+                    name="pickupTime"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="pickupLocation">Pickup Location*</label>
-                <input
-                  type="text"
-                  id="pickupLocation"
-                  name="pickupLocation"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="dropoffLocation">Dropoff Location*</label>
-                <input
-                  type="text"
-                  id="dropoffLocation"
-                  name="dropoffLocation"
-                  required
-                />
+              <div style="display: flex; gap: 16px">
+                <div class="form-group">
+                  <label for="pickupLocation" style="font-size: 12px"
+                    >Pickup Location*</label
+                  >
+                  <input
+                    type="text"
+                    id="pickupLocation"
+                    name="pickupLocation"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="dropoffLocation" style="font-size: 12px"
+                    >Dropoff Location*</label
+                  >
+                  <input
+                    type="text"
+                    id="dropoffLocation"
+                    name="dropoffLocation"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div>
               <button
                 type="submit"
                 class="btn"
-                style="width: 50%; margin-top: 1rem"
+                style="width: 40%; margin-top: 1rem; font-weight: 500"
               >
                 Submit
               </button>
@@ -328,13 +367,7 @@
     <section class="services" id="services">
       <div class="container">
         <h2>Our Services</h2>
-        <p
-          style="
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-gray);
-          "
-        >
+        <p>
           We're committed to providing the best ride experience with
           <br />unmatched service quality.
         </p>
@@ -432,7 +465,7 @@
             <img
               src="./assets/images/steps.png"
               alt="steps"
-              style="height: 55vh"
+              style="height: 45vh"
             />
           </div>
           <div class="experience-text">
@@ -447,8 +480,8 @@
                   Affordable Rate
                 </h4>
                 <p>
-                  Get premium transportation without compromising quality, get
-                  where you need to go affordably.
+                  Enjoy competitive pricing without compromising quality get
+                  where you need to go, affordably
                 </p>
               </div>
             </div>
