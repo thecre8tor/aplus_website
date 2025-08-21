@@ -365,7 +365,7 @@ form {
     url("../../assets/images/hero-image.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 79vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -388,7 +388,7 @@ form {
   box-shadow: var(--shadow-lg);
   position: absolute;
   right: 0;
-  top: 150px;
+  top: 120px;
   width: 100%;
   max-width: 400px;
   z-index: 10;
@@ -581,7 +581,7 @@ html {
 }
 
 .services {
-  padding: 100px 0;
+  padding: 100px 15px;
   background: var(--bg-light);
 }
 
