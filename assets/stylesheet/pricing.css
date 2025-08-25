@@ -210,6 +210,10 @@ body {
   width: 40%;
 }
 
+.mobile-hero-image {
+  display: none;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -404,4 +408,184 @@ body {
   gap: 24px;
   justify-content: center;
   margin-top: 49px;
+}
+
+@media (max-width: 480px) {
+  .about h2,
+  .services h2,
+  .experience-text h2,
+  .faq h2 {
+    font-size: 2rem;
+  }
+
+  .choose-plan-headings {
+    display: none;
+  }
+
+  .faq {
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 24px;
+  }
+
+  .faq-right {
+    width: 100%;
+    margin-bottom: 146px;
+  }
+
+  .faq-left a {
+    display: none;
+  }
+
+  .footer {
+    padding-bottom: 40px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .mobile-hero-image {
+    display: block;
+  }
+
+  .most-popular {
+    width: 100%;
+  }
+
+  .plan {
+    width: 100%;
+  }
+
+  .web-hero-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .experience {
+    display: none;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faq {
+    margin-top: 48px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .features-left {
+    width: 100%;
+  }
+
+  .features-right {
+    width: 100%;
+  }
+
+  .features-right img {
+    display: none;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-form {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services h2 p {
+    text-align: left;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
