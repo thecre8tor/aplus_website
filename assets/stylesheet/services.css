@@ -294,6 +294,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.mobile-hero-img {
+  display: none;
+  width: 100%;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -371,7 +376,7 @@ html {
   text-align: center;
 }
 
-.services-section p {
+.services-section > p {
   text-align: center;
   counter-reset: #333;
   margin-top: 16px;
@@ -380,6 +385,10 @@ html {
 .services-text {
   max-width: 931px;
   margin: 0 auto;
+}
+
+.service-text-mobile {
+  display: none;
 }
 
 .service-card {
@@ -550,8 +559,30 @@ html {
     text-align: left;
   }
 
+  .service-card {
+    width: 100%;
+  }
+
+  .service-text-mobile {
+    display: block;
+  }
+
+  .service-text-web {
+    display: none;
+  }
+
+  .hero {
+    background: var(--bg-light);
+    padding-top: 30px;
+  }
+
   .hero-text h1 {
     font-size: 2rem;
+    color: #000;
+  }
+
+  .hero-text > p {
+    color: #333;
   }
 
   .hero-form-mobile {
@@ -559,6 +590,11 @@ html {
     background-color: #fff;
     border-radius: 10px;
     padding: 40px 24px;
+  }
+
+  .mobile-hero-img {
+    display: block;
+    margin-bottom: 24px;
   }
 
   .footer {
@@ -574,7 +610,7 @@ html {
   }
 
   .services-section {
-    padding-top: 48px;
+    padding-top: 0;
   }
 }
 
@@ -619,6 +655,10 @@ html {
 
   .hero-text h1 {
     font-size: 2.5rem;
+  }
+
+  .how-it-works {
+    padding-top: 50px;
   }
 
   .how-it-works br {
@@ -668,6 +708,10 @@ html {
 
   .services-section p {
     text-align: left;
+  }
+
+  .services-text {
+    padding-top: 50px;
   }
 
   .why-book-container {
