@@ -65,11 +65,7 @@
 
               <div class="hero-btn-container">
                 <button class="hero-btn" style="background-color: #4dc132">
-                  <img
-                    src="./assets/images/whatsapp.svg"
-                    alt="WhatsApp icon"
-                    style="height: 20px; width: 20px"
-                  />
+                  <img src="./assets/images/whatsapp.svg" alt="WhatsApp icon" />
 
                   <p>WhatsApp</p>
                 </button>
@@ -78,7 +74,6 @@
                     src="./assets/images/mail.svg"
                     alt="mail icon
                   "
-                    style="height: 20px; width: 20px"
                   />
 
                   <p>Mail</p>
@@ -171,6 +166,86 @@
       <!-- Services Section -->
       <section class="services-section">
         <div class="container">
+          <div class="hero-mobile-form">
+            <h3>Book a Driver</h3>
+            <p>
+              Please complete the details below, then click on Submit and we
+              will be in touch
+            </p>
+            <form id="bookingForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Name*"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="Phone Number*"
+                />
+              </div>
+              <div style="margin-bottom: 13px">
+                <div class="form-group">
+                  <p style="font-size: 16px; font-weight: 500">I need a</p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-bottom: 13px;
+                  "
+                >
+                  <input type="radio" style="accent-color: #e53e3e" />
+                  <p style="font-size: 16px; font-weight: 500">
+                    Driver for a single trip
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-bottom: 13px;
+                  "
+                >
+                  <input type="radio" style="accent-color: #e53e3e" />
+                  <p style="font-size: 16px; font-weight: 500">
+                    Personal driver
+                  </p>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: center">
+                  <input type="radio" style="accent-color: #e53e3e" />
+                  <p style="font-size: 16px; font-weight: 500">
+                    Corporate driver for my business
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn"
+                style="width: 40%; margin-top: 1rem"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
           <div class="services-text">
             <h2>Enjoy Every Moment — We'll Drive You Home.</h2>
             <p>
@@ -304,6 +379,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Why Book A Driver -->
       <section class="why-book">
         <div class="container why-book-container">
           <div class="why-book-img">

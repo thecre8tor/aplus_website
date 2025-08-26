@@ -194,21 +194,14 @@ form {
   font-weight: 500;
 }
 
-.hero-btn img {
-  height: 20px; /* Consistent icon size */
-  width: 20px;
-}
-
 .hero-btn p {
-  margin: 0;
-  text-align: center;
-  line-height: 1;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .hero-btn-container {
   display: flex;
   gap: 16px;
-  width: 100%;
 }
 
 .hero-content {
@@ -232,7 +225,7 @@ form {
   z-index: 10;
 }
 
-.hero-form-mobile {
+.hero-mobile-form {
   display: none;
 }
 
@@ -249,7 +242,7 @@ form {
   line-height: 1.2;
 }
 
-.hero-text p {
+.hero-text > p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
@@ -271,6 +264,7 @@ form {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
 .hiw-grid-item p {
   font-size: 16px;
   font-weight: 500;
@@ -472,6 +466,26 @@ html {
   margin-top: 60px;
 }
 
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--primary-red-hover);
+}
+
 .why-book {
   background-color: var(--bg-light);
   padding: 100px 15px;
@@ -514,8 +528,158 @@ html {
   margin-bottom: 24px;
 }
 
-.why-book-text p {
+.why-book-text > p {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .about h2,
+  .services h2,
+  .experience-text h2,
+  .faq h2 {
+    font-size: 2rem;
+  }
+
+  .services p {
+    text-align: left;
+  }
+
+  .services h2 {
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-form-mobile {
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 24px;
+  }
+
+  .footer {
+    padding-bottom: 40px;
+  }
+
+  .feature-card {
+    flex-direction: column;
+  }
+
+  .services br {
+    display: none;
+  }
+
+  .services-section {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0 15px;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-form {
+    display: none;
+  }
+
+  .hero-mobile-form {
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .how-it-works br {
+    display: none;
+  }
+
+  .hiw-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .services h2 p {
+    text-align: left;
+  }
+
+  .services-section {
+    padding-top: 100px;
+  }
+
+  .services-section h2 {
+    text-align: left;
+  }
+
+  .services-section p {
+    text-align: left;
+  }
+
+  .why-book-container {
+    flex-direction: column;
+  }
+
+  .why-book-img {
+    width: 100%;
+  }
+
+  .why-book-text {
+    width: 100%;
+    margin-top: 48px;
+  }
 }
