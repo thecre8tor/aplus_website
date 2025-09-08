@@ -142,11 +142,11 @@ form {
   color: var(--text-dark);
 }
 
-.form-row {
+/* .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-}
+} */
 
 .header {
   background: var(--bg-white);

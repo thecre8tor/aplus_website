@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" , href="assets/stylesheet/style.css" />
+    <link rel="stylesheet" href="assets/stylesheet/style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -34,7 +34,7 @@
             <li><a href="./contact_us.html">Contact Us</a></li>
           </ul>
 
-          <!-- <--! Mobile Navigation -->
+          <!-- Mobile Navigation -->
 
           <a href="#contact" class="nav-btn">Contact Us</a>
 
@@ -65,6 +65,7 @@
             </p>
             <form id="bookingForm">
               <div class="form-group">
+                <label for="name" style="font-size: 12px">Name*</label>
                 <input
                   type="text"
                   id="name"
@@ -74,6 +75,7 @@
                 />
               </div>
               <div class="form-group">
+                <label for="email" style="font-size: 12px">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -82,6 +84,7 @@
                 />
               </div>
               <div class="form-group">
+                <label for="phone" style="font-size: 12px">Phone Number*</label>
                 <input
                   type="tel"
                   id="phone"
@@ -102,7 +105,13 @@
                     margin-bottom: 13px;
                   "
                 >
-                  <input type="radio" style="accent-color: #e53e3e" />
+                  <input
+                    type="radio"
+                    name="driverType"
+                    value="single_trip"
+                    checked
+                    style="accent-color: #e53e3e"
+                  />
                   <p style="font-size: 16px; font-weight: 500">
                     Driver for a single trip
                   </p>
@@ -115,19 +124,29 @@
                     margin-bottom: 13px;
                   "
                 >
-                  <input type="radio" style="accent-color: #e53e3e" />
+                  <input
+                    type="radio"
+                    name="driverType"
+                    value="personal"
+                    style="accent-color: #e53e3e"
+                  />
                   <p style="font-size: 16px; font-weight: 500">
                     Personal driver
                   </p>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: center">
-                  <input type="radio" style="accent-color: #e53e3e" />
+                  <input
+                    type="radio"
+                    name="driverType"
+                    value="corporate"
+                    style="accent-color: #e53e3e"
+                  />
                   <p style="font-size: 16px; font-weight: 500">
                     Corporate driver for my business
                   </p>
                 </div>
               </div>
-              <div class="form-row">
+              <div class="form-row single-trip-fields">
                 <div style="display: flex; gap: 16px">
                   <div class="form-group" style="width: 50%">
                     <label for="pickupDate" style="font-size: 12px"
@@ -155,7 +174,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
+              <div class="form-row single-trip-fields">
                 <div class="form-group">
                   <label for="pickupLocation" style="font-size: 12px"
                     >Pickup Location*</label
@@ -223,7 +242,7 @@
             Please complete the details below, then click on Submit and we will
             be in touch
           </p>
-          <form id="bookingForm">
+          <form id="bookingFormMobile">
             <div class="form-group">
               <label for="name">Name*</label>
               <input type="text" id="name" name="name" required />
@@ -236,7 +255,58 @@
               <label for="phone">Phone Number*</label>
               <input type="tel" id="phone" name="phone" required />
             </div>
-            <div class="form-row">
+            <div style="margin-bottom: 13px">
+              <div class="form-group">
+                <p style="font-size: 16px; font-weight: 500">I need a</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 12px;
+                  align-items: center;
+                  margin-bottom: 13px;
+                "
+              >
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="single_trip"
+                  checked
+                  style="accent-color: #e53e3e"
+                />
+                <p style="font-size: 16px; font-weight: 500">
+                  Driver for a single trip
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 12px;
+                  align-items: center;
+                  margin-bottom: 13px;
+                "
+              >
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="personal"
+                  style="accent-color: #e53e3e"
+                />
+                <p style="font-size: 16px; font-weight: 500">Personal driver</p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: center">
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="corporate"
+                  style="accent-color: #e53e3e"
+                />
+                <p style="font-size: 16px; font-weight: 500">
+                  Corporate driver for my business
+                </p>
+              </div>
+            </div>
+            <div class="form-row single-trip-fields">
               <div style="display: flex; gap: 16px" class="custom-form-row">
                 <div class="form-group">
                   <label for="pickupDate" style="font-size: 12px"
@@ -262,7 +332,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-row">
+            <div class="form-row single-trip-fields">
               <div style="display: flex; gap: 16px">
                 <div class="form-group">
                   <label for="pickupLocation" style="font-size: 12px"

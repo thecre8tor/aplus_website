@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" , href="assets/stylesheet/services.css" />
+    <link rel="stylesheet" href="assets/stylesheet/services.css" />
   </head>
   <body>
     <!-- Header -->
@@ -52,9 +52,9 @@
             <div class="hero-text">
               <h1>APlus Services</h1>
               <p>
-                At Safe Driver Dubai, we offer a premium private car hire
-                service, backed by a team of highly trained drivers committed to
-                meeting your expectations.
+                At APlus Drivers, we offer a premium private car hire service,
+                backed by a team of highly trained drivers committed to meeting
+                your expectations.
               </p>
               <p>
                 Our chauffeurs ensure you arrive safely and punctually at your
@@ -62,22 +62,31 @@
                 years of experience handling executive cars, our drivers treat
                 your car with the same respect and attention you do.
               </p>
-
               <div class="hero-btn-container">
-                <button class="hero-btn" style="background-color: #4dc132">
-                  <img src="./assets/images/whatsapp.svg" alt="WhatsApp icon" />
-
-                  <p>WhatsApp</p>
-                </button>
-                <button class="hero-btn" style="background-color: #ec1a23">
+                <a
+                  href="https://wa.me/2348112401245"
+                  class="hero-btn"
+                  style="background-color: #25d366"
+                >
+                  <img
+                    src="./assets/images/whatsapp.svg"
+                    alt="whatsapp icon"
+                    width="24"
+                  />
+                  <p>Whatsapp</p>
+                </a>
+                <a
+                  href="mailto:Info@aplusdrivers.com"
+                  class="hero-btn"
+                  style="background-color: #e53e3e"
+                >
                   <img
                     src="./assets/images/mail.svg"
-                    alt="mail icon
-                  "
+                    alt="mail icon"
+                    width="24"
                   />
-
                   <p>Mail</p>
-                </button>
+                </a>
               </div>
             </div>
             <div class="hero-form">
@@ -88,6 +97,7 @@
               </p>
               <form id="bookingForm">
                 <div class="form-group">
+                  <label for="name" style="font-size: 12px">Name*</label>
                   <input
                     type="text"
                     id="name"
@@ -97,6 +107,7 @@
                   />
                 </div>
                 <div class="form-group">
+                  <label for="email" style="font-size: 12px">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -105,6 +116,9 @@
                   />
                 </div>
                 <div class="form-group">
+                  <label for="phone" style="font-size: 12px"
+                    >Phone Number*</label
+                  >
                   <input
                     type="tel"
                     id="phone"
@@ -125,7 +139,13 @@
                       margin-bottom: 13px;
                     "
                   >
-                    <input type="radio" style="accent-color: #e53e3e" />
+                    <input
+                      type="radio"
+                      name="driverType"
+                      value="single_trip"
+                      style="accent-color: #e53e3e"
+                      checked
+                    />
                     <p style="font-size: 16px; font-weight: 500">
                       Driver for a single trip
                     </p>
@@ -138,19 +158,80 @@
                       margin-bottom: 13px;
                     "
                   >
-                    <input type="radio" style="accent-color: #e53e3e" />
+                    <input
+                      type="radio"
+                      name="driverType"
+                      value="personal"
+                      style="accent-color: #e53e3e"
+                    />
                     <p style="font-size: 16px; font-weight: 500">
                       Personal driver
                     </p>
                   </div>
                   <div style="display: flex; gap: 12px; align-items: center">
-                    <input type="radio" style="accent-color: #e53e3e" />
+                    <input
+                      type="radio"
+                      name="driverType"
+                      value="corporate"
+                      style="accent-color: #e53e3e"
+                    />
                     <p style="font-size: 16px; font-weight: 500">
                       Corporate driver for my business
                     </p>
                   </div>
                 </div>
-
+                <div class="form-row single-trip-fields">
+                  <div style="display: flex; gap: 16px">
+                    <div class="form-group" style="width: 50%">
+                      <label for="pickupDate" style="font-size: 12px"
+                        >Pickup Date*</label
+                      >
+                      <input
+                        type="date"
+                        id="pickupDate"
+                        name="pickupDate"
+                        required
+                        placeholder="Pickup Date*"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="pickupTime" style="font-size: 12px"
+                        >Pickup Time*</label
+                      >
+                      <input
+                        type="time"
+                        id="pickupTime"
+                        name="pickupTime"
+                        style="width: 100%"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row single-trip-fields">
+                  <div class="form-group">
+                    <label for="pickupLocation" style="font-size: 12px"
+                      >Pickup Location*</label
+                    >
+                    <input
+                      type="text"
+                      id="pickupLocation"
+                      name="pickupLocation"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="dropoffLocation" style="font-size: 12px"
+                      >Dropoff Location*</label
+                    >
+                    <input
+                      type="text"
+                      id="dropoffLocation"
+                      name="dropoffLocation"
+                      required
+                    />
+                  </div>
+                </div>
                 <button
                   type="submit"
                   class="btn"
@@ -161,6 +242,159 @@
               </form>
             </div>
           </div>
+        </div>
+        <img
+          src="./assets/images/services-mobile-hero.png"
+          alt="Mobile Hero Image"
+          class="mobile-hero-img"
+        />
+        <div class="hero-mobile-form">
+          <h3>Book a Driver</h3>
+          <p>
+            Please complete the details below, then click on Submit and we will
+            be in touch
+          </p>
+          <form id="bookingFormMobile">
+            <div class="form-group">
+              <label for="nameMobile" style="font-size: 12px">Name*</label>
+              <input
+                type="text"
+                id="nameMobile"
+                name="name"
+                required
+                placeholder="Name*"
+              />
+            </div>
+            <div class="form-group">
+              <label for="emailMobile" style="font-size: 12px">Email</label>
+              <input
+                type="email"
+                id="emailMobile"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phoneMobile" style="font-size: 12px"
+                >Phone Number*</label
+              >
+              <input
+                type="tel"
+                id="phoneMobile"
+                name="phone"
+                required
+                placeholder="Phone Number*"
+              />
+            </div>
+            <div style="margin-bottom: 13px">
+              <div class="form-group">
+                <p style="font-size: 16px; font-weight: 500">I need a</p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 12px;
+                  align-items: center;
+                  margin-bottom: 13px;
+                "
+              >
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="single_trip"
+                  style="accent-color: #e53e3e"
+                  checked
+                />
+                <p style="font-size: 16px; font-weight: 500">
+                  Driver for a single trip
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 12px;
+                  align-items: center;
+                  margin-bottom: 13px;
+                "
+              >
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="personal"
+                  style="accent-color: #e53e3e"
+                />
+                <p style="font-size: 16px; font-weight: 500">Personal driver</p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: center">
+                <input
+                  type="radio"
+                  name="driverType"
+                  value="corporate"
+                  style="accent-color: #e53e3e"
+                />
+                <p style="font-size: 16px; font-weight: 500">
+                  Corporate driver for my business
+                </p>
+              </div>
+            </div>
+            <div class="form-row single-trip-fields">
+              <div style="display: flex; gap: 16px" class="custom-form-row">
+                <div class="form-group">
+                  <label for="pickupDateMobile" style="font-size: 12px"
+                    >Pickup Date*</label
+                  >
+                  <input
+                    type="date"
+                    id="pickupDateMobile"
+                    name="pickupDate"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pickupTimeMobile" style="font-size: 12px"
+                    >Pickup Time*</label
+                  >
+                  <input
+                    type="time"
+                    id="pickupTimeMobile"
+                    name="pickupTime"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-row single-trip-fields">
+              <div class="form-group">
+                <label for="pickupLocationMobile" style="font-size: 12px"
+                  >Pickup Location*</label
+                >
+                <input
+                  type="text"
+                  id="pickupLocationMobile"
+                  name="pickupLocation"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="dropoffLocationMobile" style="font-size: 12px"
+                  >Dropoff Location*</label
+                >
+                <input
+                  type="text"
+                  id="dropoffLocationMobile"
+                  name="dropoffLocation"
+                  required
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn"
+              style="width: 40%; margin-top: 1rem; font-weight: 500"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </section>
       <!-- Services Section -->
