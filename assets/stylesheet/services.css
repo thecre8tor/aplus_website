@@ -63,6 +63,12 @@ body {
   margin: 0 auto;
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .footer {
   background-color: #e5e5e5;
   color: white;
@@ -142,12 +148,6 @@ form {
   color: var(--text-dark);
 }
 
-/* .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-} */
-
 .header {
   background: var(--bg-white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -219,7 +219,7 @@ form {
   box-shadow: var(--shadow-lg);
   position: absolute;
   right: 0;
-  top: 75px;
+  top: -20px;
   width: 100%;
   max-width: 400px;
   z-index: 10;
@@ -623,10 +623,6 @@ html {
     display: flex;
     flex-direction: column;
     padding: 0;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
   }
 
   .header {
