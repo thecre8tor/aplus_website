@@ -1,6 +1,9 @@
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const navMenu = document.getElementById("navMenu");
+const arrowUp = document.getElementById("arrow_up");
+const arrowDown = document.getElementById("arrow_down");
+const experienceFeature = document.querySelector(".experience-feature");
 
 mobileMenuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -8,6 +11,68 @@ mobileMenuToggle.addEventListener("click", () => {
 
 // State for selected driver type (initialized to first option)
 let selectedDriverType = "single_trip";
+
+// Array of content for each index
+const experienceContent = [
+  {
+    title: "Affordable Rates",
+    description:
+      "Enjoy competitive pricing without compromising quality get where you need to go, affordably",
+  },
+  {
+    title: "Reliable Service",
+    description:
+      "Our drivers are punctual and professional, ensuring you reach your destination on time",
+  },
+  {
+    title: "Comfortable Rides",
+    description:
+      "Experience a smooth and comfortable journey with our well-maintained vehicles",
+  },
+];
+
+// State for tracking experience section
+let experienceIndex = 0;
+
+// Function to update the UI based on the current index
+const updateExperienceContent = () => {
+  const currentContent = experienceContent[experienceIndex];
+  experienceFeature.innerHTML = `
+    <div style="width: 264px">
+      <h4 style="font-size: 22px; font-weight: 500">${currentContent.title}</h4>
+      <p>${currentContent.description}</p>
+    </div>
+  `;
+};
+
+// Functions to update experience section
+const increaseExperienceIndex = () => {
+  if (experienceIndex >= 2) {
+    experienceIndex = 0;
+  } else {
+    experienceIndex++;
+  }
+  updateExperienceContent();
+};
+
+const decreaseExperienceIndex = () => {
+  if (experienceIndex <= 0) {
+    experienceIndex = 2;
+  } else {
+    experienceIndex--;
+  }
+  updateExperienceContent();
+};
+
+// Event listeners for experience arrows
+arrowUp.addEventListener("click", increaseExperienceIndex);
+arrowDown.addEventListener("click", decreaseExperienceIndex);
+
+// Function to update experience display
+const updateExperienceDisplay = () => {
+  const experienceYears = document.getElementById("experienceYears");
+  const experienceText = document.getElementById("experienceText");
+};
 
 // Function to toggle visibility of single-trip fields
 function toggleSingleTripFields() {
