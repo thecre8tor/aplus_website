@@ -4,6 +4,7 @@ const navMenu = document.getElementById("navMenu");
 const arrowUp = document.getElementById("arrow_up");
 const arrowDown = document.getElementById("arrow_down");
 const experienceFeature = document.querySelector(".experience-feature");
+const stepNumbers = document.querySelectorAll(".step-number");
 
 mobileMenuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -43,7 +44,21 @@ const updateExperienceContent = () => {
       <p>${currentContent.description}</p>
     </div>
   `;
+
+  // Update active step number
+  stepNumbers.forEach((step, index) => {
+    step.style.background =
+      index === experienceIndex ? "#FFC107" : "transparent";
+  });
 };
+
+// Event listeners for step numbers
+stepNumbers.forEach((step) => {
+  step.addEventListener("click", () => {
+    experienceIndex = parseInt(step.dataset.index);
+    updateExperienceContent();
+  });
+});
 
 // Functions to update experience section
 const increaseExperienceIndex = () => {
