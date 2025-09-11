@@ -1,19 +1,33 @@
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const navMenu = document.getElementById("navMenu");
+
+if (mobileMenuToggle && navMenu) {
+  mobileMenuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
+
+// Close mobile menu when clicking outside
+if (navMenu && mobileMenuToggle) {
+  document.addEventListener("click", (e) => {
+    if (
+      !navMenu.contains(e.target) &&
+      !mobileMenuToggle.contains(e.target) &&
+      !e.target.closest(".faq-item")
+    ) {
+      navMenu.classList.remove("active");
+    }
+  });
+}
+
+// Experience Section
 const arrowUp = document.getElementById("arrow_up");
 const arrowDown = document.getElementById("arrow_down");
 const experienceFeature = document.querySelector(".experience-feature");
 const stepNumbers = document.querySelectorAll(".step-number");
 
-mobileMenuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-// State for selected driver type (initialized to first option)
-let selectedDriverType = "single_trip";
-
-// Array of content for each index
+let experienceIndex = 0;
 const experienceContent = [
   {
     title: "Affordable Rates",
@@ -32,11 +46,8 @@ const experienceContent = [
   },
 ];
 
-// State for tracking experience section
-let experienceIndex = 0;
-
-// Function to update the UI based on the current index
 const updateExperienceContent = () => {
+  if (!experienceFeature) return;
   const currentContent = experienceContent[experienceIndex];
   experienceFeature.innerHTML = `
     <div style="width: 264px">
@@ -44,23 +55,21 @@ const updateExperienceContent = () => {
       <p>${currentContent.description}</p>
     </div>
   `;
-
-  // Update active step number
   stepNumbers.forEach((step, index) => {
     step.style.background =
       index === experienceIndex ? "#FFC107" : "transparent";
   });
 };
 
-// Event listeners for step numbers
-stepNumbers.forEach((step) => {
-  step.addEventListener("click", () => {
-    experienceIndex = parseInt(step.dataset.index);
-    updateExperienceContent();
+if (stepNumbers.length > 0) {
+  stepNumbers.forEach((step) => {
+    step.addEventListener("click", () => {
+      experienceIndex = parseInt(step.dataset.index);
+      updateExperienceContent();
+    });
   });
-});
+}
 
-// Functions to update experience section
 const increaseExperienceIndex = () => {
   if (experienceIndex >= 2) {
     experienceIndex = 0;
@@ -79,17 +88,54 @@ const decreaseExperienceIndex = () => {
   updateExperienceContent();
 };
 
-// Event listeners for experience arrows
-arrowUp.addEventListener("click", increaseExperienceIndex);
-arrowDown.addEventListener("click", decreaseExperienceIndex);
+if (arrowUp) {
+  arrowUp.addEventListener("click", increaseExperienceIndex);
+}
+if (arrowDown) {
+  arrowDown.addEventListener("click", decreaseExperienceIndex);
+}
 
-// Function to update experience display
-const updateExperienceDisplay = () => {
-  const experienceYears = document.getElementById("experienceYears");
-  const experienceText = document.getElementById("experienceText");
-};
+// FAQ Accordion
+const faqItems = document.querySelectorAll(".faq-item");
 
-// Function to toggle visibility of single-trip fields
+if (faqItems.length > 0) {
+  console.log("FAQ items found:", faqItems.length);
+  faqItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      console.log("FAQ item clicked:", item);
+      const isActive = item.classList.contains("active");
+      const icon = item.querySelector(".faq-icon");
+      const answer = item.querySelector(".faq-answer");
+
+      if (!icon || !answer) {
+        console.error("Missing icon or answer for item:", item);
+        return;
+      }
+
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          const otherIcon = otherItem.querySelector(".faq-icon");
+          const otherAnswer = otherItem.querySelector(".faq-answer");
+          if (otherIcon && otherAnswer) {
+            otherIcon.src = "./assets/images/add.svg";
+            otherAnswer.style.maxHeight = "0";
+          }
+        }
+      });
+
+      item.classList.toggle("active");
+      icon.src = isActive
+        ? "./assets/images/add.svg"
+        : "./assets/images/minus.svg";
+      answer.style.maxHeight = isActive ? "0" : `${answer.scrollHeight}px`;
+    });
+  });
+}
+
+// Form Submission
+let selectedDriverType = "single_trip";
+
 function toggleSingleTripFields() {
   const forms = [
     document.getElementById("bookingForm"),
@@ -106,31 +152,24 @@ function toggleSingleTripFields() {
   });
 }
 
-// Initialize field visibility
 toggleSingleTripFields();
 
-// Update state and toggle fields when any radio is clicked
 document.querySelectorAll('input[name="driverType"]').forEach((radio) => {
   radio.addEventListener("change", (e) => {
     selectedDriverType = e.target.value;
-    console.log("Updated driver type:", selectedDriverType); // For debugging
+    console.log("Updated driver type:", selectedDriverType);
     toggleSingleTripFields();
   });
 });
 
-// Reusable form submission handler
 function handleBookingSubmit(form) {
+  if (!form) return;
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    // Get form data
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-
-    // Include the state
     data.driverType = selectedDriverType;
 
-    // Validation
     if (!data.name || !data.phone || !data.driverType) {
       alert(
         "Please fill in all required fields (Name, Phone, and Driver Type)."
@@ -138,7 +177,6 @@ function handleBookingSubmit(form) {
       return;
     }
 
-    // Validate single-trip fields only if driverType is single_trip
     if (data.driverType === "single_trip") {
       if (
         !data.pickupDate ||
@@ -153,10 +191,8 @@ function handleBookingSubmit(form) {
       }
     }
 
-    // Log data for debugging
     console.log("Booking data:", data);
 
-    // Send to API (replace with your actual endpoint)
     try {
       const response = await fetch("https://api.example.com/bookings", {
         method: "POST",
@@ -171,8 +207,8 @@ function handleBookingSubmit(form) {
           "Thank you for your booking request! We will contact you shortly."
         );
         form.reset();
-        selectedDriverType = "single_trip"; // Reset state
-        toggleSingleTripFields(); // Reset field visibility
+        selectedDriverType = "single_trip";
+        toggleSingleTripFields();
       } else {
         alert("There was an error submitting your booking. Please try again.");
       }
@@ -183,42 +219,13 @@ function handleBookingSubmit(form) {
   });
 }
 
-// Attach handler to both forms
 const bookingForm = document.getElementById("bookingForm");
 if (bookingForm) handleBookingSubmit(bookingForm);
 
 const bookingFormMobile = document.getElementById("bookingFormMobile");
 if (bookingFormMobile) handleBookingSubmit(bookingFormMobile);
 
-// FAQ Accordion
-const faqItems = document.querySelectorAll(".faq-item");
-if (faqItems.length > 0) {
-  faqItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
-      const icon = item.querySelector(".faq-icon");
-
-      // Close all other FAQ items
-      faqItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
-          const otherIcon = otherItem.querySelector(".faq-icon");
-          if (otherIcon) {
-            otherIcon.src = "./assets/images/add.svg";
-          }
-        }
-      });
-
-      // Toggle current FAQ item
-      item.classList.toggle("active");
-      icon.src = isActive
-        ? "./assets/images/add.svg"
-        : "./assets/images/minus.svg";
-    });
-  });
-}
-
-// Smooth Scrolling for Navigation Links
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -235,12 +242,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Header Scroll Effect
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
-  if (window.scrollY > 100) {
-    header.style.background = "rgba(255, 255, 255, 0.95)";
-    header.style.backdropFilter = "blur(10px)";
-  } else {
-    header.style.background = "var(--bg-white)";
-    header.style.backdropFilter = "none";
+  if (header) {
+    if (window.scrollY > 100) {
+      header.style.background = "rgba(255, 255, 255, 0.95)";
+      header.style.backdropFilter = "blur(10px)";
+    } else {
+      header.style.background = "var(--bg-white)";
+      header.style.backdropFilter = "none";
+    }
   }
 });
 
@@ -258,25 +267,17 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe elements for animation
 document
   .querySelectorAll(".feature-card, .service-card, .faq-item")
   .forEach((el) => {
     observer.observe(el);
   });
 
-// Set minimum date to today for both booking forms
+// Set minimum date for booking forms
 const today = new Date().toISOString().split("T")[0];
 const pickupDates = document.querySelectorAll("#pickupDate");
 pickupDates.forEach((dateInput) => {
   dateInput.setAttribute("min", today);
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-    navMenu.classList.remove("active");
-  }
 });
 
 // Newsletter form submission
